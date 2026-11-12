@@ -5,6 +5,25 @@ Projet du module **Réseau et backend du jeu**. C'est une simulation de connexio
 - **Serveur** en Python (Pygame) : il simule tout le jeu (il fait autorité) et affiche un **tableau de bord réseau** en direct (topologie, paquets, poignée de main TCP, journal, débit, latence simulée).
 - **Client** dans Unity (C#) : prédiction côté client, réconciliation, interpolation, et un panneau réseau (ping, paquets, journal).
 
+## Aperçu
+
+**Le jeu (client Unity)** : l'arène, les personnages, les bots, et à droite le panneau réseau (échanges client ↔ serveur, ping, paquets, prédiction, journal).
+
+![Le jeu en action](Captures/jeu.jpg)
+
+**Le serveur (Python)** : le tableau de bord réseau en direct. On y voit la topologie avec les paquets qui circulent, l'arène telle que le serveur la voit, les clients connectés et le journal de tous les messages.
+
+![Tableau de bord du serveur](Captures/serveur.jpg)
+
+| Menu de départ | Mode spectateur |
+|---|---|
+| ![Menu](Captures/menu.jpg) | ![Spectateur](Captures/spectateur.jpg) |
+| Pseudo, adresse IP du serveur, choix du personnage | Le client ne fait que recevoir l'état du jeu (18 paquets/s reçus, 1 paquet/s envoyé) |
+
+**Les 6 personnages** (la tenue prend la couleur du joueur) :
+
+![Personnages](Captures/personnages.jpg)
+
 ## Contenu du dépôt
 
 | Dossier / fichier | Rôle |
@@ -15,6 +34,7 @@ Projet du module **Réseau et backend du jeu**. C'est une simulation de connexio
 | `Serveur/client.py` | Premier client simple en Pygame (pour `serveur.py`) |
 | `Assets/ClientArene.cs` | Client Unity (le jeu) |
 | `Assets/Resources/Personnages/` | Images des personnages |
+| `Captures/` | Captures d'écran de ce README |
 
 ## Démarrage rapide
 
